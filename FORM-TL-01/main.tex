@@ -1,1 +1,667 @@
-% FORM-TL-01 - Taller de tipos de requisitos
+% !TeX program = pdflatex
+\documentclass[12pt,a4paper,oneside]{article}
+
+% PAQUETES
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{newtxtext,newtxmath}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+\setstretch{1.15}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{3pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={FORM-TL-01 - Taller de tipos de requisitos},
+    pdfauthor={Angelina Julexy Llerena Abril}
+}
+
+\titleformat{\section}
+{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalfont\bfseries\normalsize}{\thesubsection.}{0.5em}{}
+
+% Columnas para las tablas
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% DATOS
+\newcommand{\nombreestudiante}{Angelina Julexy Llerena Abril}
+\newcommand{\paralelo}{A}
+\newcommand{\fechaentrega}{31 de octubre de 2026}
+
+% DOCUMENTO
+\begin{document}
+
+% PORTADA
+\begin{titlepage}
+    \centering
+
+    {\large \textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
+    {\large Facultad de Ciencias de la Computación}\\
+    {\large Carrera de Software}\\[1.5cm]
+
+    {\Large \textbf{INGENIERÍA DE REQUERIMIENTOS}}\\[0.5cm]
+    {\large ISR-401}\\[1.5cm]
+
+    {\LARGE \textbf{FORM-TL-01}}\\[0.4cm]
+    {\Large Taller de tipos de requisitos}\\[0.5cm]
+
+    \rule{0.85\textwidth}{0.5pt}\\[0.5cm]
+    {\large \textbf{Identificación y clasificación de requisitos}}\\
+    {\large Plataforma de gestión de citas médicas}\\[0.5cm]
+    \rule{0.85\textwidth}{0.5pt}\\[2cm]
+
+    \begin{flushleft}
+        \textbf{Estudiante:} \nombreestudiante\\[0.4cm]
+        \textbf{Nivel:} Cuarto\\[0.4cm]
+        \textbf{Paralelo:} \paralelo\\[0.4cm]
+        \textbf{Docente:} Gleiston Cicerón Guerrero Ulloa, PhD\\[0.4cm]
+        \textbf{Fecha de entrega:} \fechaentrega
+    \end{flushleft}
+
+    \vfill
+    {\large Quevedo -- Ecuador}\\
+    {\large 2026}
+\end{titlepage}
+
+% CONTENIDO
+\section{Clasificación de los requisitos}
+
+La clasificación de los 20 enunciados considera
+tres dimensiones: el tipo de requisito, su naturaleza y el nivel
+al que corresponde. El tipo comprende las categorías
+funcional, calidad y restricción, de acuerdo con lo establecido
+en la guía entregada por el docente. La naturaleza distingue entre
+requisitos del producto y del proceso, mientras que el nivel
+permite diferenciar los correspondientes al sistema y al software.
+
+Los criterios de clasificación se apoyan en
+ISO/IEC/IEEE 29148:2018 \cite{ieee29148}. Para los requisitos de
+calidad también se consideran las características y subcaracterísticas
+definidas en ISO/IEC 25010:2023 \cite{iso25010}.
+
+\subsection{Tabla de clasificación}
+
+\small
+\begin{longtable}{
+    C{1.25cm}
+    L{3.5cm}
+    L{2.2cm}
+    C{1.7cm}
+    C{1.35cm}
+    L{4.5cm}
+}
+\caption{Clasificación de los 20 enunciados del caso de estudio}
+\label{tab:clasificacion}\\
+
+\toprule
+\textbf{Código} &
+\textbf{Enunciado} &
+\textbf{Tipo} &
+\textbf{Naturaleza} &
+\textbf{Nivel} &
+\textbf{Justificación} \\
+\midrule
+\endfirsthead
+
+\multicolumn{6}{c}{
+    
+}\\
+\toprule
+\textbf{Código} &
+\textbf{Enunciado} &
+\textbf{Tipo} &
+\textbf{Naturaleza} &
+\textbf{Nivel} &
+\textbf{Justificación} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+E01 &
+El paciente podrá reservar una cita eligiendo especialidad,
+médico, fecha y hora entre los horarios disponibles. &
+Funcional &
+Producto &
+Software &
+Según ISO/IEC/IEEE 29148:2018, corresponde a un requisito
+funcional porque especifica el servicio de reserva de citas
+que debe proporcionar el software \cite{ieee29148}. \\
+
+E02 &
+La plataforma enviará al paciente un recordatorio por mensaje
+de texto 24 horas antes de su cita. &
+Funcional &
+Producto &
+Software &
+Establece un servicio que debe proporcionar el software,
+por lo que corresponde a un requisito funcional según
+ISO/IEC/IEEE 29148:2018 \cite{ieee29148}. \\
+
+E03 &
+La aplicación debe ser rápida. &
+Calidad: eficiencia del desempeño
+(comportamiento temporal) &
+Producto &
+Software &
+Corresponde a eficiencia del desempeño porque establece
+una condición sobre el tiempo de respuesta del software,
+característica definida en ISO/IEC 25010:2023
+\cite{iso25010}. \\
+
+E04 &
+El recepcionista podrá registrar la llegada del paciente que
+se acerca a la ventanilla. &
+Funcional &
+Producto &
+Software &
+Es un requisito funcional porque especifica la operación
+de registro de llegada que debe ofrecer el software
+\cite{ieee29148}. \\
+
+E05 &
+La plataforma se desarrollará en Java 21 con base de datos
+PostgreSQL, tecnologías que domina el área de TI. &
+Restricción &
+Producto &
+Software &
+Impone tecnologías que condicionan la solución de software,
+por lo que constituye una restricción según
+ISO/IEC/IEEE 29148:2018 \cite{ieee29148}. \\
+
+E06 &
+El médico podrá consultar la lista de pacientes del día y
+marcar cada consulta como atendida. &
+Funcional &
+Producto &
+Software &
+Define las funciones de consulta de pacientes y registro
+de atenciones que debe proporcionar el software
+\cite{ieee29148}. \\
+
+E07 &
+Los datos de salud de los pacientes deben estar seguros. &
+Calidad: seguridad (confidencialidad) &
+Producto &
+Software &
+Establece una condición de protección de la información
+frente a accesos no autorizados, correspondiente a la
+confidencialidad de ISO/IEC 25010:2023 \cite{iso25010}. \\
+
+E08 &
+La aplicación móvil debe funcionar en teléfonos con Android
+10 o superior. &
+Restricción &
+Producto &
+Software &
+Fija una condición de compatibilidad que limita los entornos
+de ejecución del software \cite{ieee29148}. \\
+
+E09 &
+Una cita cancelada con menos de cuatro horas de anticipación
+se registrará como inasistencia. &
+Funcional &
+Producto &
+Software &
+Especifica la respuesta que debe ejecutar el software
+ante una cancelación fuera del plazo establecido
+\cite{ieee29148}. \\
+
+E10 &
+La plataforma debe ser fácil de usar para los pacientes
+adultos mayores. &
+Calidad: capacidad de interacción
+(inclusividad) &
+Producto &
+Software &
+Establece una condición de inclusión para distintos grupos
+de usuarios, característica contemplada en
+ISO/IEC 25010:2023 \cite{iso25010}. \\
+
+E11 &
+El proyecto debe entregarse en un plazo máximo de seis meses. &
+Restricción &
+Proceso &
+Software &
+Establece un límite temporal que condiciona el proceso
+de desarrollo y entrega del software \cite{ieee29148}. \\
+
+E12 &
+La sesión de un usuario se cerrará automáticamente tras
+10 minutos sin actividad. &
+Funcional &
+Producto &
+Software &
+Define la función de cierre automático de sesión que
+debe ejecutar el software ante la inactividad
+\cite{ieee29148}. \\
+
+E13 &
+El quiosco de la sala de espera leerá el número de cédula
+ingresado en su pantalla táctil e imprimirá un ticket con
+el número de turno. &
+Funcional &
+Producto &
+Sistema &
+Especifica una capacidad funcional del sistema que integra
+la lectura de datos y la impresión de turnos
+\cite{ieee29148}. \\
+
+E14 &
+La plataforma debe estar siempre disponible. &
+Calidad: fiabilidad (disponibilidad) &
+Producto &
+Sistema &
+Establece una condición de disponibilidad operativa
+del sistema, subcaracterística de fiabilidad definida
+en ISO/IEC 25010:2023 \cite{iso25010}. \\
+
+E15 &
+El director médico podrá generar un reporte mensual de
+inasistencias por especialidad. &
+Funcional &
+Producto &
+Software &
+Define el servicio de generación de reportes que debe
+proporcionar el software al director médico
+\cite{ieee29148}. \\
+
+E16 &
+Cada incremento se validará con el director médico al final
+de cada iteración de dos semanas. &
+Restricción &
+Proceso &
+Software &
+Establece una condición obligatoria para las actividades
+de validación durante el proceso de desarrollo
+\cite{ieee29148}. \\
+
+E17 &
+El tratamiento de los datos personales de los pacientes debe
+cumplir la Ley Orgánica de Protección de Datos Personales
+del Ecuador. &
+Restricción &
+Producto &
+Sistema &
+Impone una obligación legal que condiciona el funcionamiento
+y tratamiento de datos del sistema \cite{ieee29148}. \\
+
+E18 &
+La plataforma debe integrarse sin problemas con el sistema
+de facturación actual. &
+Calidad: compatibilidad (interoperabilidad) &
+Producto &
+Software &
+Establece el intercambio de información con otro producto,
+propio de la interoperabilidad definida en
+ISO/IEC 25010:2023 \cite{iso25010}. \\
+
+E19 &
+Si el servidor principal falla, la plataforma debe restablecer
+el servicio en menos de 30 minutos sin perder ninguna cita
+confirmada. &
+Calidad: fiabilidad (recuperabilidad) &
+Producto &
+Sistema &
+Define la recuperación del sistema ante fallos y la
+conservación de los datos, características contempladas
+en ISO/IEC 25010:2023 \cite{iso25010}. \\
+
+E20 &
+Todo cambio en el código fuente será revisado por otro
+integrante del equipo antes de integrarse a la rama principal. &
+Restricción &
+Proceso &
+Software &
+Establece una práctica obligatoria de revisión dentro
+del proceso de desarrollo del software \cite{ieee29148}. \\
+
+\end{longtable}
+\normalsize
+
+\subsection{Criterios utilizados en la clasificación}
+
+Las dimensiones de la tabla se interpretan mediante
+los siguientes criterios, de acuerdo con la guía del docente
+y las normas de referencia:
+
+\begin{itemize}[leftmargin=1.5cm]
+
+    \item \textbf{Funcional:} describe una función, acción o
+    servicio que el sistema debe realizar para responder a
+    las necesidades de sus usuarios.
+
+    \item \textbf{Calidad:} establece una característica que
+    determina cómo debe comportarse el producto o qué
+    propiedades debe cumplir. Se identifica mediante las
+    características y subcaracterísticas de ISO/IEC 25010:2023.
+
+    \item \textbf{Restricción:} representa una condición,
+    limitación o regla obligatoria que condiciona la solución
+    o el proceso utilizado para desarrollarla.
+
+    \item \textbf{Producto:} corresponde a los requisitos
+    relacionados con las características, funciones o
+    condiciones que debe cumplir el producto desarrollado.
+
+    \item \textbf{Proceso:} comprende los requisitos que
+    establecen condiciones sobre las actividades, prácticas
+    o procedimientos utilizados durante el desarrollo.
+
+    \item \textbf{Sistema:} se refiere a requisitos que abarcan
+    el funcionamiento de la solución en su conjunto, incluidos
+    los componentes de hardware, software y sus interacciones.
+
+    \item \textbf{Software:} corresponde a requisitos relacionados
+    específicamente con las funciones o características de la
+    aplicación y sus componentes de software.
+
+\end{itemize}
+
+Las justificaciones de la Tabla~\ref{tab:clasificacion}
+explican los motivos de cada clasificación. Se consideran
+los criterios de ingeniería de requisitos de
+ISO/IEC/IEEE 29148:2018 \cite{ieee29148}; para los requisitos
+de calidad también se toma en cuenta la característica
+y subcaracterística correspondiente de ISO/IEC 25010:2023
+\cite{iso25010}.
+
+% EVALUACIÓN DE PROPIEDADES DE CALIDAD
+\section{Enunciados con propiedades de calidad violadas y su cuantificación}
+
+En el caso de estudio se identifican cinco requisitos que
+presentan problemas en sus propiedades de calidad,
+principalmente ambigüedad y falta de verificabilidad:
+E03, E07, E10, E14 y E18. Sus formulaciones contienen
+expresiones generales que dificultan determinar con precisión
+cuándo se considera cumplido cada requisito.
+
+\begin{table}[htbp]
+\centering
+\caption{Propiedad violada por cada enunciado}
+\label{tab:violaciones}
+\small
+\begin{tabular}{C{1.3cm} L{4.0cm} L{8.0cm}}
+\toprule
+\textbf{Código} & \textbf{Propiedad violada} & \textbf{Motivo} \\
+\midrule
+E03 & Ambigüedad y no verificabilidad &
+La expresión ``rápida'' es subjetiva, porque no establece
+un tiempo de respuesta ni una condición de prueba. \\
+
+E07 & No verificabilidad &
+La expresión ``seguros'' no especifica medidas de protección
+ni criterios que permitan comprobar el cumplimiento. \\
+
+E10 & Ambigüedad y no verificabilidad &
+La expresión ``fácil de usar'' depende de la percepción
+del usuario y no establece una tarea ni una medida para
+evaluar la facilidad de uso. \\
+
+E14 & No verificabilidad e inconsistencia &
+La expresión ``siempre disponible'' no establece un porcentaje
+ni un periodo de medición. Además, puede generar una
+inconsistencia con E19, que admite un plazo de hasta
+30 minutos para restablecer el servicio ante una falla. \\
+
+E18 & Ambigüedad y no verificabilidad &
+La expresión ``sin problemas'' no establece condiciones
+concretas para comprobar que la integración funciona
+correctamente. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Para mejorar la precisión de estos requisitos se propone
+una métrica, una unidad y un umbral que permitan comprobar
+su cumplimiento. Los valores planteados son criterios
+iniciales de especificación y deben validarse con los
+responsables del policlínico antes de considerarse definitivos.
+No representan valores establecidos directamente por las
+normas ISO o IEEE.
+
+\subsection{Requisitos reformulados}
+
+\begin{enumerate}[leftmargin=1.2cm]
+
+    \item \textbf{E03 -- Eficiencia del desempeño}
+
+    \textbf{Enunciado original:} La aplicación debe ser rápida.
+
+    \textbf{Requisito reformulado:} La aplicación deberá responder
+    en un tiempo máximo de 2 segundos para al menos el 95\,\%
+    de las operaciones de consulta y reserva, durante una prueba
+    con 300 usuarios concurrentes.
+
+    \textbf{Métrica:} Percentil 95 del tiempo de respuesta.
+
+    \textbf{Unidad:} Segundos.
+
+    \textbf{Umbral:} Menor o igual a 2 segundos.
+
+    \item \textbf{E07 -- Seguridad}
+
+    \textbf{Enunciado original:} Los datos de salud de los
+    pacientes deben estar seguros.
+
+    \textbf{Requisito reformulado:} El 100\,\% de los accesos
+    a los datos de salud deberá requerir autenticación y
+    autorización según el rol del usuario. Además, el 100\,\%
+    de las comunicaciones que transmitan estos datos deberá
+    utilizar un canal cifrado.
+
+    \textbf{Métrica:} Porcentaje de accesos protegidos y de
+    comunicaciones cifradas.
+
+    \textbf{Unidad:} Porcentaje.
+
+    \textbf{Umbral:} 100\,\% de cumplimiento en ambos criterios.
+
+    \item \textbf{E10 -- Capacidad de interacción}
+
+    \textbf{Enunciado original:} La plataforma debe ser fácil
+    de usar para los pacientes adultos mayores.
+
+    \textbf{Requisito reformulado:} Al menos el 90\,\% de los
+    participantes mayores de 60 años que realicen una prueba
+    de uso deberá completar el proceso de reserva de una cita
+    en un tiempo máximo de 3 minutos, sin recibir asistencia
+    durante la ejecución de la tarea.
+
+    \textbf{Métrica:} Porcentaje de participantes que completan
+    correctamente la tarea y tiempo de ejecución.
+
+    \textbf{Unidad:} Porcentaje y minutos.
+
+    \textbf{Umbral:} Al menos 90\,\% de éxito y máximo 3 minutos.
+
+    \item \textbf{E14 -- Fiabilidad}
+
+    \textbf{Enunciado original:} La plataforma debe estar
+    siempre disponible.
+
+    \textbf{Requisito reformulado:} La plataforma deberá mantener
+    una disponibilidad mensual mínima del 99,5\,\%, calculada
+    sobre el tiempo total de cada mes. Ante una falla del servidor
+    principal, el servicio deberá restablecerse en menos de
+    30 minutos, de acuerdo con lo establecido en E19. El tiempo
+    durante el cual el servicio permanezca interrumpido se
+    contabilizará como indisponibilidad.
+
+    \textbf{Métrica:} Porcentaje mensual de disponibilidad.
+
+    \textbf{Unidad:} Porcentaje.
+
+    \textbf{Umbral:} Igual o superior al 99,5\,\%.
+
+    \item \textbf{E18 -- Compatibilidad}
+
+    \textbf{Enunciado original:} La plataforma debe integrarse
+    sin problemas con el sistema de facturación actual.
+
+    \textbf{Requisito reformulado:} La plataforma deberá
+    intercambiar correctamente los registros de cobro con
+    el sistema de facturación existente, de manera que al
+    menos el 99\,\% de las transacciones válidas de una prueba
+    de integración se procese correctamente y en un tiempo
+    máximo de 5 segundos por transacción.
+
+    \textbf{Métrica:} Porcentaje de transacciones procesadas
+    correctamente y tiempo de procesamiento.
+
+    \textbf{Unidad:} Porcentaje y segundos.
+
+    \textbf{Umbral:} Al menos 99\,\% de éxito y máximo 5 segundos.
+
+\end{enumerate}
+
+\subsection{Resumen de métricas y umbrales}
+
+\begin{table}[htbp]
+\centering
+\caption{Resumen de los requisitos de calidad cuantificados}
+\label{tab:metricas}
+\small
+\begin{tabular}{C{1.3cm} L{3.0cm} L{4.0cm} L{2.0cm} L{2.8cm}}
+\toprule
+\textbf{Código} &
+\textbf{Característica} &
+\textbf{Métrica} &
+\textbf{Unidad} &
+\textbf{Umbral} \\
+\midrule
+
+E03 & Eficiencia del desempeño &
+Percentil 95 del tiempo de respuesta &
+Segundos &
+$\leq 2$ \\
+
+E07 & Seguridad &
+Accesos y comunicaciones protegidos &
+Porcentaje &
+100\,\% \\
+
+E10 & Capacidad de interacción &
+Éxito de la tarea y tiempo de ejecución &
+Porcentaje y minutos &
+$\geq 90\,\%$ y $\leq 3$ \\
+
+E14 & Fiabilidad &
+Disponibilidad mensual &
+Porcentaje &
+$\geq 99{,}5\,\%$ \\
+
+E18 & Compatibilidad &
+Transacciones correctas y tiempo de procesamiento &
+Porcentaje y segundos &
+$\geq 99\,\%$ y $\leq 5$ \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
+La cuantificación aporta mayor objetividad a los requisitos
+y facilita la evaluación de su cumplimiento. Para que una
+condición sea verificable, debe contar con criterios que
+puedan comprobarse mediante una métrica y un procedimiento
+de prueba definido, de acuerdo con ISO/IEC/IEEE 29148:2018
+\cite{ieee29148}.
+
+% COMPARACIÓN
+\section{Comparación de resultados con un compañero}
+
+En esta sección se registran las diferencias identificadas
+al contrastar la clasificación individual con la de un compañero.
+Para resolverlas se revisan el contenido de cada caso,
+su propósito y los criterios establecidos en las normas
+de referencia.
+
+\subsection{Registro de discrepancias}
+
+\begin{longtable}{
+    C{0.8cm}
+    L{3.0cm}
+    L{3.0cm}
+    L{3.0cm}
+    L{4.0cm}
+}
+\caption{Registro de discrepancias y resolución}
+\label{tab:discrepancias}\\
+
+\toprule
+\textbf{N.º} &
+\textbf{Código} &
+\textbf{Mi clasificación} &
+\textbf{Clasificación del compañero} &
+\textbf{Resolución y justificación} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{N.º} &
+\textbf{Código} &
+\textbf{Mi clasificación} &
+\textbf{Clasificación del compañero} &
+\textbf{Resolución y justificación} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+1 & [Completar] & [Completar] & [Completar] & [Completar] \\
+
+2 & [Completar] & [Completar] & [Completar] & [Completar] \\
+
+3 & [Completar] & [Completar] & [Completar] & [Completar] \\
+
+\end{longtable}
+
+\subsection{Resultado de la comparación}
+
+Se compararon los 20 enunciados con [nombre del compañero]
+y se encontraron [n] diferencias. Las discrepancias se
+resolvieron revisando el contenido de cada caso y aplicando
+los criterios de clasificación establecidos en la guía
+FORM-TL-01 y en las normas de referencia.
+
+La clasificación definitiva se presenta en la
+Tabla~\ref{tab:clasificacion}. Las diferencias identificadas
+y los acuerdos alcanzados se documentan en la
+Tabla~\ref{tab:discrepancias}.
+
+% DECLARACIÓN DE USO DE IA
+
+\section{Declaración de uso de herramientas de apoyo}
+
+
+% REFERENCIAS
+\bibliographystyle{ieeetr}
+\bibliography{referencias}
+
+\end{document}
