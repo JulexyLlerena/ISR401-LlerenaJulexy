@@ -53,7 +53,7 @@
 % DATOS
 \newcommand{\nombreestudiante}{Angelina Julexy Llerena Abril}
 \newcommand{\paralelo}{A}
-\newcommand{\fechaentrega}{31 de octubre de 2026}
+\newcommand{\fechaentrega}{07 de noviembre de 2026}
 
 % DOCUMENTO
 \begin{document}
@@ -69,8 +69,7 @@
     {\Large \textbf{INGENIERÍA DE REQUERIMIENTOS}}\\[0.5cm]
     {\large ISR-401}\\[1.5cm]
 
-    {\LARGE \textbf{FORM-TL-01}}\\[0.4cm]
-    {\Large Taller de tipos de requisitos}\\[0.5cm]
+    {\LARGE \textbf{FORM-TL-01}}\\[0.9cm]
 
     \rule{0.85\textwidth}{0.5pt}\\[0.5cm]
     {\large \textbf{Identificación y clasificación de requisitos}}\\
@@ -93,18 +92,7 @@
 % CONTENIDO
 \section{Clasificación de los requisitos}
 
-La clasificación de los 20 enunciados considera
-tres dimensiones: el tipo de requisito, su naturaleza y el nivel
-al que corresponde. El tipo comprende las categorías
-funcional, calidad y restricción, de acuerdo con lo establecido
-en la guía entregada por el docente. La naturaleza distingue entre
-requisitos del producto y del proceso, mientras que el nivel
-permite diferenciar los correspondientes al sistema y al software.
-
-Los criterios de clasificación se apoyan en
-ISO/IEC/IEEE 29148:2018 \cite{ieee29148}. Para los requisitos de
-calidad también se consideran las características y subcaracterísticas
-definidas en ISO/IEC 25010:2023 \cite{iso25010}.
+Los 20 enunciados se clasifican según las tres dimensiones establecidas en la guía entregada por el docente: tipo de requisito (funcional, calidad o restricción), naturaleza (producto o proceso) y nivel (sistema o software). Como apoyo para esta clasificación, se utilizan las normas ISO/IEC/IEEE 29148:2018 \cite{ieee29148} e ISO/IEC 25010:2023 \cite{iso25010}, que permiten identificar y clasificar los requisitos de calidad.
 
 \subsection{Tabla de clasificación}
 
@@ -344,62 +332,13 @@ del proceso de desarrollo del software \cite{ieee29148}. \\
 \end{longtable}
 \normalsize
 
-\subsection{Criterios utilizados en la clasificación}
-
-Las dimensiones de la tabla se interpretan mediante
-los siguientes criterios, de acuerdo con la guía del docente
-y las normas de referencia:
-
-\begin{itemize}[leftmargin=1.5cm]
-
-    \item \textbf{Funcional:} describe una función, acción o
-    servicio que el sistema debe realizar para responder a
-    las necesidades de sus usuarios.
-
-    \item \textbf{Calidad:} establece una característica que
-    determina cómo debe comportarse el producto o qué
-    propiedades debe cumplir. Se identifica mediante las
-    características y subcaracterísticas de ISO/IEC 25010:2023.
-
-    \item \textbf{Restricción:} representa una condición,
-    limitación o regla obligatoria que condiciona la solución
-    o el proceso utilizado para desarrollarla.
-
-    \item \textbf{Producto:} corresponde a los requisitos
-    relacionados con las características, funciones o
-    condiciones que debe cumplir el producto desarrollado.
-
-    \item \textbf{Proceso:} comprende los requisitos que
-    establecen condiciones sobre las actividades, prácticas
-    o procedimientos utilizados durante el desarrollo.
-
-    \item \textbf{Sistema:} se refiere a requisitos que abarcan
-    el funcionamiento de la solución en su conjunto, incluidos
-    los componentes de hardware, software y sus interacciones.
-
-    \item \textbf{Software:} corresponde a requisitos relacionados
-    específicamente con las funciones o características de la
-    aplicación y sus componentes de software.
-
-\end{itemize}
-
-Las justificaciones de la Tabla~\ref{tab:clasificacion}
-explican los motivos de cada clasificación. Se consideran
-los criterios de ingeniería de requisitos de
-ISO/IEC/IEEE 29148:2018 \cite{ieee29148}; para los requisitos
-de calidad también se toma en cuenta la característica
-y subcaracterística correspondiente de ISO/IEC 25010:2023
-\cite{iso25010}.
-
 % EVALUACIÓN DE PROPIEDADES DE CALIDAD
 \section{Enunciados con propiedades de calidad violadas y su cuantificación}
 
 En el caso de estudio se identifican cinco requisitos que
 presentan problemas en sus propiedades de calidad,
 principalmente ambigüedad y falta de verificabilidad:
-E03, E07, E10, E14 y E18. Sus formulaciones contienen
-expresiones generales que dificultan determinar con precisión
-cuándo se considera cumplido cada requisito.
+E03, E07, E10, E14 y E18. 
 
 \begin{table}[htbp]
 \centering
@@ -415,27 +354,27 @@ La expresión ``rápida'' es subjetiva, porque no establece
 un tiempo de respuesta ni una condición de prueba. \\
 
 E07 & No verificabilidad &
-La expresión ``seguros'' no especifica medidas de protección
+La palabra ``seguros'' no especifica medidas de protección
 ni criterios que permitan comprobar el cumplimiento. \\
 
 E10 & Ambigüedad y no verificabilidad &
-La expresión ``fácil de usar'' depende de la percepción
+El término ``fácil de usar'' depende de la percepción
 del usuario y no establece una tarea ni una medida para
 evaluar la facilidad de uso. \\
 
-E14 & No verificabilidad e inconsistencia &
+E14 & Falta de verificabilidad &
 La expresión ``siempre disponible'' no establece un porcentaje
-ni un periodo de medición. \\
+de disponibilidad ni un periodo para medirla. \\
 
 E18 & Ambigüedad y no verificabilidad &
-La expresión ``sin problemas'' no establece condiciones
+El término ``sin problemas'' no establece condiciones
 específicas para comprobar que la integración funciona
 correctamente. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Para mejorar la precisión de estos requisitos se propone
+Para mejorar la claridad de estos requisitos se propone
 una métrica, una unidad y un umbral que permitan comprobar
 su cumplimiento.
 
@@ -499,13 +438,7 @@ su cumplimiento.
     \textbf{Enunciado original:} La plataforma debe estar
     siempre disponible.
 
-    \textbf{Requisito reformulado:} La plataforma deberá mantener
-    una disponibilidad mensual mínima del 99,5\,\%, calculada
-    sobre el tiempo total de cada mes. Ante una falla del servidor
-    principal, el servicio deberá restablecerse en menos de
-    30 minutos, de acuerdo con lo establecido en E19. El tiempo
-    durante el cual el servicio permanezca interrumpido se
-    contabilizará como indisponibilidad.
+    \textbf{Requisito reformulado:} La plataforma deberá mantener una disponibilidad mensual mínima del 99,5\,\%, calculada sobre el tiempo total de cada mes. El tiempo durante el cual el servicio permanezca interrumpido se contabilizará como indisponibilidad.
 
     \textbf{Métrica:} Porcentaje mensual de disponibilidad.
 
@@ -534,57 +467,6 @@ su cumplimiento.
 
 \end{enumerate}
 
-\subsection{Resumen de métricas y umbrales}
-
-\begin{table}[htbp]
-\centering
-\caption{Resumen de los requisitos de calidad cuantificados}
-\label{tab:metricas}
-\small
-\begin{tabular}{C{1.3cm} L{3.0cm} L{4.0cm} L{2.0cm} L{2.8cm}}
-\toprule
-\textbf{Código} &
-\textbf{Característica} &
-\textbf{Métrica} &
-\textbf{Unidad} &
-\textbf{Umbral} \\
-\midrule
-
-E03 & Eficiencia del desempeño &
-Percentil 95 del tiempo de respuesta &
-Segundos &
-$\leq 2$ \\
-
-E07 & Seguridad &
-Accesos y comunicaciones protegidos &
-Porcentaje &
-100\,\% \\
-
-E10 & Capacidad de interacción &
-Éxito de la tarea y tiempo de ejecución &
-Porcentaje y minutos &
-$\geq 90\,\%$ y $\leq 3$ \\
-
-E14 & Fiabilidad &
-Disponibilidad mensual y tiempo de recuperación &
-Porcentaje y minutos &
-$\geq 99{,}5\,\%$ y $< 30$ \\
-
-E18 & Compatibilidad &
-Transacciones correctas y tiempo de procesamiento &
-Porcentaje y segundos &
-$\geq 99\,\%$ y $\leq 5$ \\
-
-\bottomrule
-\end{tabular}
-\end{table}
-
-La cuantificación aporta mayor objetividad a los requisitos
-y facilita la evaluación de su cumplimiento. Para que una
-condición sea verificable, debe contar con criterios que
-puedan comprobarse mediante una métrica y un procedimiento
-de prueba definido, de acuerdo con ISO/IEC/IEEE 29148:2018
-\cite{ieee29148}.
 
 % COMPARACIÓN
 \section{Comparación de resultados con una compañera}
@@ -643,17 +525,16 @@ Pertenece al nivel sistema, ya  que la disponibilidad también depende del servi
 
 \subsection{Resultado de la comparación}
 
-Se compararon los 20 enunciados con la compañera Landy Fuertes y se
-encontraron 3 diferencias (E01, E09 y E14) en el nivel
-sistema o software. En los demás aspectos hubo coincidencia.
-Las diferencias se resolvieron con un mismo criterio: un requisito es
-de nivel sistema cuando interviene hardware o infraestructura, y de
-nivel software cuando la función la realiza solo la aplicación. La clasificación definitiva se presenta en la Tabla~\ref{tab:clasificacion}.
+Al comparar los 20 enunciados con la compañera Landy Fuertes, se
+identificaron 3 diferencias (E01, E09 y E14), relacionadas con el
+nivel sistema o software. Estas diferencias se analizaron y
+resolvieron según las características de cada requisito, como se
+muestra en la Tabla \ref{tab:diferencias}.
 
 % DECLARACIÓN DE USO DE IA
 \section{Declaración de uso de herramientas de apoyo}
 
-Durante el desarrollo de esta tarea se utilizó Claude y ChatGPT como herramientas de apoyo en la elaboración y revisión del documento. Su utilización permitió facilitar algunas actividades y mejorar la presentación del trabajo. A continuación, se presentan las evidencias de los prompts utilizados y las actividades realizadas.
+Durante el desarrollo de esta actividad se utilizaron Claude Sonnet 5.5, de Anthropic, y ChatGPT GPT-6, de OpenAI, como herramientas de apoyo para revisar y corregir la redacción, identificar ambigüedades, corregir errores y explicar aspectos relacionados con el código LaTeX. También, se emplearon para detectar posibles errores en la clasificación de los requisitos. Las sugerencias obtenidas fueron revisadas y se utilizaron como referencia para realizar los ajustes necesarios en el documento.
 
 \subsection{Evidencias de uso de inteligencia artificial}
 
@@ -683,6 +564,18 @@ De igual manera, Claude se utilizó para identificar errores en el código LaTeX
 \end{figure}
 
 Por otro lado, ChatGPT se utilizó para revisar el contenido de la actividad, identificar problemas de redacción, errores gramaticales, ambigüedades y redundancias, y proponer alternativas de corrección. Como se evidencia en la Figura \ref{fig:evidencia03}, esta herramienta permitió reconocer los problemas presentes y proponer formas de mejorar su redacción.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{evidencias/evidencia04.png}
+    \caption{Verificación y corrección de posibles errores en la clasificación de requisitos mediante ChatGPT.}
+    \label{fig:evidencia04}
+\end{figure}
+
+A partir de la clasificación realizada, surgieron dudas sobre la interpretación de algunos requisitos. Por ello, se solicitó
+apoyo a ChatGPT para verificar su clasificación, identificar
+posibles errores y explicar el motivo de las correcciones.
+Como se muestra en la Figura \ref{fig:evidencia04}, se identificaron casos que requerían ajustes en su clasificación.
 
 % REFERENCIAS
 \bibliographystyle{IEEEtran}
