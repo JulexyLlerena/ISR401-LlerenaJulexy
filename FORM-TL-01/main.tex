@@ -13,8 +13,10 @@
 \usepackage{enumitem}
 \usepackage{microtype}
 \usepackage{setspace}
-\usepackage{hyperref}
 \usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
 
 \geometry{
     left=2.5cm,
@@ -128,9 +130,7 @@ definidas en ISO/IEC 25010:2023 \cite{iso25010}.
 \midrule
 \endfirsthead
 
-\multicolumn{6}{c}{
-    
-}\\
+
 \toprule
 \textbf{Código} &
 \textbf{Enunciado} &
@@ -425,13 +425,11 @@ evaluar la facilidad de uso. \\
 
 E14 & No verificabilidad e inconsistencia &
 La expresión ``siempre disponible'' no establece un porcentaje
-ni un periodo de medición. Además, puede generar una
-inconsistencia con E19, que admite un plazo de hasta
-30 minutos para restablecer el servicio ante una falla. \\
+ni un periodo de medición. \\
 
 E18 & Ambigüedad y no verificabilidad &
 La expresión ``sin problemas'' no establece condiciones
-concretas para comprobar que la integración funciona
+específicas para comprobar que la integración funciona
 correctamente. \\
 \bottomrule
 \end{tabular}
@@ -439,11 +437,7 @@ correctamente. \\
 
 Para mejorar la precisión de estos requisitos se propone
 una métrica, una unidad y un umbral que permitan comprobar
-su cumplimiento. Los valores planteados son criterios
-iniciales de especificación y deben validarse con los
-responsables del policlínico antes de considerarse definitivos.
-No representan valores establecidos directamente por las
-normas ISO o IEEE.
+su cumplimiento.
 
 \subsection{Requisitos reformulados}
 
@@ -572,9 +566,9 @@ Porcentaje y minutos &
 $\geq 90\,\%$ y $\leq 3$ \\
 
 E14 & Fiabilidad &
-Disponibilidad mensual &
-Porcentaje &
-$\geq 99{,}5\,\%$ \\
+Disponibilidad mensual y tiempo de recuperación &
+Porcentaje y minutos &
+$\geq 99{,}5\,\%$ y $< 30$ \\
 
 E18 & Compatibilidad &
 Transacciones correctas y tiempo de procesamiento &
@@ -593,15 +587,11 @@ de prueba definido, de acuerdo con ISO/IEC/IEEE 29148:2018
 \cite{ieee29148}.
 
 % COMPARACIÓN
-\section{Comparación de resultados con un compañero}
+\section{Comparación de resultados con una compañera}
 
-En esta sección se registran las diferencias identificadas
-al contrastar la clasificación individual con la de un compañero.
-Para resolverlas se revisan el contenido de cada caso,
-su propósito y los criterios establecidos en las normas
-de referencia.
+En esta sección se presentan las diferencias encontradas entre la clasificación individual y la realizada por la compañera Landy Fuertes.
 
-\subsection{Registro de discrepancias}
+\subsection{Registro de diferencias}
 
 \begin{longtable}{
     C{0.8cm}
@@ -610,14 +600,14 @@ de referencia.
     L{3.0cm}
     L{4.0cm}
 }
-\caption{Registro de discrepancias y resolución}
-\label{tab:discrepancias}\\
+\caption{Registro de diferencias y resolución}
+\label{tab:diferencias}\\
 
 \toprule
 \textbf{N.º} &
 \textbf{Código} &
 \textbf{Mi clasificación} &
-\textbf{Clasificación del compañero} &
+\textbf{Clasificación de la compañera} &
 \textbf{Resolución y justificación} \\
 \midrule
 \endfirsthead
@@ -626,7 +616,7 @@ de referencia.
 \textbf{N.º} &
 \textbf{Código} &
 \textbf{Mi clasificación} &
-\textbf{Clasificación del compañero} &
+\textbf{Clasificación de la compañera} &
 \textbf{Resolución y justificación} \\
 \midrule
 \endhead
@@ -634,34 +624,68 @@ de referencia.
 \bottomrule
 \endfoot
 
-1 & [Completar] & [Completar] & [Completar] & [Completar] \\
+1 & E01 &
+Funcional, Producto, Software &
+Funcional, Producto, Sistema &
+Corresponde al nivel software, ya que la reserva de citas es una función que realiza únicamente la aplicación. \\
 
-2 & [Completar] & [Completar] & [Completar] & [Completar] \\
+2 & E09 &
+Funcional, Producto, Software &
+Funcional, Producto, Sistema &
+Se clasifica como software porque es una regla que la aplicación aplica al registrar la cancelación tardía. \\
 
-3 & [Completar] & [Completar] & [Completar] & [Completar] \\
+3 & E14 &
+Calidad (fiabilidad), Producto, Sistema &
+Calidad (fiabilidad), Producto, Software &
+Pertenece al nivel sistema, ya  que la disponibilidad también depende del servidor y la red, igual que en E19. \\
 
 \end{longtable}
 
 \subsection{Resultado de la comparación}
 
-Se compararon los 20 enunciados con [nombre del compañero]
-y se encontraron [n] diferencias. Las discrepancias se
-resolvieron revisando el contenido de cada caso y aplicando
-los criterios de clasificación establecidos en la guía
-FORM-TL-01 y en las normas de referencia.
-
-La clasificación definitiva se presenta en la
-Tabla~\ref{tab:clasificacion}. Las diferencias identificadas
-y los acuerdos alcanzados se documentan en la
-Tabla~\ref{tab:discrepancias}.
+Se compararon los 20 enunciados con la compañera Landy Fuertes y se
+encontraron 3 diferencias (E01, E09 y E14) en el nivel
+sistema o software. En los demás aspectos hubo coincidencia.
+Las diferencias se resolvieron con un mismo criterio: un requisito es
+de nivel sistema cuando interviene hardware o infraestructura, y de
+nivel software cuando la función la realiza solo la aplicación. La clasificación definitiva se presenta en la Tabla~\ref{tab:clasificacion}.
 
 % DECLARACIÓN DE USO DE IA
-
 \section{Declaración de uso de herramientas de apoyo}
 
+Durante el desarrollo de esta tarea se utilizó Claude y ChatGPT como herramientas de apoyo en la elaboración y revisión del documento. Su utilización permitió facilitar algunas actividades y mejorar la presentación del trabajo. A continuación, se presentan las evidencias de los prompts utilizados y las actividades realizadas.
+
+\subsection{Evidencias de uso de inteligencia artificial}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{evidencias/evidencia01.png}
+    \caption{Solicitud de elaboración de la estructura del documento en LaTeX mediante Claude.}
+    \label{fig:evidencia01}
+\end{figure}
+
+Como se muestra en la Figura \ref{fig:evidencia01}, se utilizó Claude para generar una estructura inicial del documento en LaTeX, tomando como referencia lo establecido en la guía.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{evidencias/evidencia02.png}
+    \caption{Identificación y corrección de errores en el código LaTeX mediante Claude.}
+    \label{fig:evidencia02}
+\end{figure}
+
+De igual manera, Claude se utilizó para identificar errores en el código LaTeX y proponer las correcciones necesarias. La Figura \ref{fig:evidencia02} muestra la interacción con esta herramienta durante el proceso de revisión y corrección.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth,height=0.65\textheight,keepaspectratio]{evidencias/evidencia03.png}
+    \caption{Revisión y corrección de errores gramaticales, ambigüedades y redundancias mediante ChatGPT.}
+    \label{fig:evidencia03}
+\end{figure}
+
+Por otro lado, ChatGPT se utilizó para revisar el contenido de la actividad, identificar problemas de redacción, errores gramaticales, ambigüedades y redundancias, y proponer alternativas de corrección. Como se evidencia en la Figura \ref{fig:evidencia03}, esta herramienta permitió reconocer los problemas presentes y proponer formas de mejorar su redacción.
 
 % REFERENCIAS
-\bibliographystyle{ieeetr}
+\bibliographystyle{IEEEtran}
 \bibliography{referencias}
 
 \end{document}
