@@ -1,0 +1,324 @@
+
+% !TeX program = pdflatex
+\documentclass[12pt,a4paper,oneside]{article}
+
+% PAQUETES
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{newtxtext,newtxmath}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+
+% CONFIGURACIÓN
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+\setstretch{1.15}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{3pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=blue,
+    pdftitle={TA-IND-01 - IEEE 29148 y tipos de requisitos},
+    pdfauthor={Angelina Julexy Llerena Abril}
+}
+
+\titleformat{\section}
+{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalfont\bfseries\normalsize}{\thesubsection.}{0.5em}{}
+
+% COLUMNAS
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% DATOS
+\newcommand{\nombreestudiante}{Angelina Julexy Llerena Abril}
+\newcommand{\paralelo}{A}
+\newcommand{\fechaentrega}{07 de noviembre de 2026}
+\newcommand{\sistema}{WhatsApp Web}
+\newcommand{\pendiente}[1]{\textit{[Completar: #1]}}
+
+\begin{document}
+
+% PORTADA
+\begin{titlepage}
+    \centering
+
+    {\large \textbf{UNIVERSIDAD TÉCNICA ESTATAL DE QUEVEDO}}\\[0.3cm]
+    {\large Facultad de Ciencias de la Computación}\\
+    {\large Carrera de Software}\\[1.5cm]
+
+    {\Large \textbf{INGENIERÍA DE REQUERIMIENTOS}}\\[0.5cm]
+    {\large ISR-401}\\[1.5cm]
+
+    {\LARGE \textbf{TA-IND-01}}\\[0.9cm]
+
+    \rule{0.85\textwidth}{0.5pt}\\[0.5cm]
+
+    {\large \textbf{IEEE 29148 y tipos de requisitos de un sistema conocido}}\\
+    {\large Caso de estudio: \sistema}\\[0.5cm]
+
+    \rule{0.85\textwidth}{0.5pt}\\[2cm]
+
+    \begin{flushleft}
+        \textbf{Estudiante:} \nombreestudiante\\[0.4cm]
+        \textbf{Nivel:} Cuarto\\[0.4cm]
+        \textbf{Paralelo:} \paralelo\\[0.4cm]
+        \textbf{Docente:} Gleiston Cicerón Guerrero Ulloa, PhD\\[0.4cm]
+        \textbf{Sistema analizado:} \sistema\\[0.4cm]
+        \textbf{Fecha de entrega:} \fechaentrega
+    \end{flushleft}
+
+    \vfill
+
+    {\large Quevedo -- Ecuador}\\
+    {\large 2026}
+
+\end{titlepage}
+
+% SISTEMA ELEGIDO
+\section{Sistema elegido}
+
+\pendiente{Propósito del sistema, usuarios principales y contexto de uso.}
+
+% RESUMEN ANALÍTICO
+\section{Resumen analítico de ISO/IEC/IEEE 29148:2018}
+
+\subsection{Requisito bien formado y atributos}
+
+\pendiente{Cláusula 5.2.4 y diferencia entre requisito y atributo de la cláusula 5.2.8.}
+
+\subsection{Características de un requisito individual}
+
+\pendiente{Nueve características de la cláusula 5.2.5.}
+
+\subsection{Características de un conjunto de requisitos}
+
+\pendiente{Características de la cláusula 5.2.6.}
+
+\subsection{Criterios de lenguaje y términos ambiguos}
+
+\pendiente{Cláusula 5.2.7: términos prohibidos y ejemplos.}
+
+% GLOSARIO
+\section{Glosario de términos de la cláusula 3}
+
+\small
+\begin{longtable}{L{3.0cm} L{5.2cm} L{5.2cm}}
+\caption{Glosario de términos}\label{tab:glosario}\\
+
+\toprule
+\textbf{Término} &
+\textbf{Definición} &
+\textbf{Ejemplo} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{Término} &
+\textbf{Definición} &
+\textbf{Ejemplo} \\
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+\pendiente{Término 1} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 2} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 3} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 4} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 5} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 6} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 7} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 8} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 9} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+\pendiente{Término 10} & \pendiente{Definición} & \pendiente{Ejemplo} \\
+
+\end{longtable}
+\normalsize
+
+% REQUISITOS
+\section{Requisitos del sistema}
+
+\subsection{Enunciados de los requisitos}
+
+\begin{enumerate}[leftmargin=1.5cm]
+
+    \item \textbf{RF-01:} \pendiente{Requisito funcional.}
+    \item \textbf{RF-02:} \pendiente{Requisito funcional.}
+    \item \textbf{RF-03:} \pendiente{Requisito funcional.}
+    \item \textbf{RF-04:} \pendiente{Requisito funcional.}
+
+    \item \textbf{RD-01:} \pendiente{Requisito de desempeño.}
+    \item \textbf{RD-02:} \pendiente{Requisito de desempeño.}
+
+    \item \textbf{RI-01:} \pendiente{Requisito de interfaz externa.}
+
+    \item \textbf{RP-01:} \pendiente{Requisito de proceso.}
+
+    \item \textbf{RQ-01:} \pendiente{Requisito de calidad.}
+    \item \textbf{RQ-02:} \pendiente{Requisito de calidad.}
+    \item \textbf{RQ-03:} \pendiente{Requisito de calidad.}
+    \item \textbf{RQ-04:} \pendiente{Requisito de calidad.}
+    \item \textbf{RQ-05:} \pendiente{Requisito de calidad.}
+
+    \item \textbf{RU-01:} \pendiente{Requisito de usabilidad o calidad en uso.}
+    \item \textbf{RU-02:} \pendiente{Requisito de usabilidad o calidad en uso.}
+
+\end{enumerate}
+
+% CLASIFICACIÓN
+\section{Clasificación de los requisitos}
+
+\small
+\begin{longtable}{C{1.1cm} L{4.0cm} L{2.0cm} L{3.0cm} L{4.0cm}}
+
+\caption{Clasificación de los requisitos}\label{tab:clasificacion}\\
+
+\toprule
+\textbf{ID} &
+\textbf{Enunciado} &
+\textbf{Tipo} &
+\textbf{Característica ISO/IEC 25010} &
+\textbf{Métrica y criterio de aceptación} \\
+
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ID} &
+\textbf{Enunciado} &
+\textbf{Tipo} &
+\textbf{Característica ISO/IEC 25010} &
+\textbf{Métrica y criterio de aceptación} \\
+
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+RF-01 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RF-02 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RF-03 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RF-04 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RD-01 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RD-02 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RI-01 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RP-01 & \pendiente{Enunciado} & \pendiente{Tipo} & No aplica & \pendiente{Criterio} \\
+RQ-01 & \pendiente{Enunciado} & Calidad & \pendiente{Característica y subcaracterística} & \pendiente{Métrica y umbral} \\
+RQ-02 & \pendiente{Enunciado} & Calidad & \pendiente{Característica y subcaracterística} & \pendiente{Métrica y umbral} \\
+RQ-03 & \pendiente{Enunciado} & Calidad & \pendiente{Característica y subcaracterística} & \pendiente{Métrica y umbral} \\
+RQ-04 & \pendiente{Enunciado} & Calidad & \pendiente{Característica y subcaracterística} & \pendiente{Métrica y umbral} \\
+RQ-05 & \pendiente{Enunciado} & Calidad & \pendiente{Característica y subcaracterística} & \pendiente{Métrica y umbral} \\
+RU-01 & \pendiente{Enunciado} & \pendiente{Tipo} & \pendiente{Si aplica} & \pendiente{Criterio} \\
+RU-02 & \pendiente{Enunciado} & \pendiente{Tipo} & \pendiente{Si aplica} & \pendiente{Criterio} \\
+
+\end{longtable}
+\normalsize
+
+% AUTOEVALUACIÓN
+\section{Autoevaluación y corrección de los requisitos}
+
+\small
+\begin{longtable}{C{1.3cm} L{4.0cm} L{3.6cm} L{4.2cm}}
+
+\caption{Autoevaluación de los requisitos}\label{tab:auto}\\
+
+\toprule
+\textbf{ID} &
+\textbf{Versión anterior} &
+\textbf{Propiedad incumplida} &
+\textbf{Versión corregida} \\
+
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{ID} &
+\textbf{Versión anterior} &
+\textbf{Propiedad incumplida} &
+\textbf{Versión corregida} \\
+
+\midrule
+\endhead
+
+\bottomrule
+\endfoot
+
+RF-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RF-02 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RF-03 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RF-04 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RD-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RD-02 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RI-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RP-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RQ-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RQ-02 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RQ-03 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RQ-04 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RQ-05 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RU-01 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+RU-02 & \pendiente{Anterior} & \pendiente{Evaluación} & \pendiente{Corregida} \\
+
+\end{longtable}
+\normalsize
+
+% REFLEXIÓN
+\section{Reflexión}
+
+\pendiente{Media página: tipo de requisito que presentó mayor dificultad y explicación del motivo.}
+
+% EVIDENCIAS
+\section{Evidencias}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{figuras/whatsapp_mensajes.png}
+    \caption{Interfaz de conversaciones de WhatsApp Web.}
+    \label{fig:mensajes}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{figuras/whatsapp_archivos.png}
+    \caption{Opciones para adjuntar y compartir archivos.}
+    \label{fig:archivos}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.90\textwidth]{figuras/whatsapp_perfil.png}
+    \caption{Opciones de perfil o configuración de WhatsApp Web.}
+    \label{fig:perfil}
+\end{figure}
+
+% DECLARACIÓN
+\section{Declaración de uso de herramientas de apoyo}
+
+\pendiente{Herramienta, versión, propósito y forma de verificación.}
+
+% REFERENCIAS
+\bibliographystyle{IEEEtran}
+\bibliography{referencias}
+
+\end{document}
