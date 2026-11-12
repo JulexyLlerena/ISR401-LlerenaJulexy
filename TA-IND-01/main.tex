@@ -19,6 +19,7 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{pdflscape}
+\usepackage{csquotes}
 \usepackage{hyperref}
 
 % CONFIGURACIÓN
@@ -96,7 +97,7 @@
 % SISTEMA ELEGIDO
 \section{Sistema elegido}
 
-WhatsApp Web es una plataforma de mensajería instantánea que permite a los usuarios acceder a sus conversaciones desde un navegador web, sin depender exclusivamente de la aplicación móvil para comunicarse. Su propósito principal es facilitar el intercambio de mensajes y contenido multimedia, así como mantener la comunicación desde un computador. Está dirigido principalmente a personas que utilizan WhatsApp para comunicarse con familiares, amigos, compañeros de estudio y trabajo, además de usuarios que mantienen conversaciones con cuentas comerciales. Se utiliza desde computadores de escritorio o portátiles con acceso a internet, especialmente en entornos personales, académicos y laborales, donde resulta práctico escribir, consultar conversaciones y compartir archivos mientras se realizan otras actividades.
+WhatsApp Web es una plataforma de mensajería instantánea que permite a los usuarios acceder a sus conversaciones desde un navegador web, sin depender exclusivamente de la aplicación móvil para comunicarse. Su propósito principal es facilitar el intercambio de mensajes y contenido multimedia, así como mantener la comunicación desde un computador. Está dirigido principalmente a personas que utilizan WhatsApp para comunicarse con familiares, amigos, compañeros de estudio y trabajo, además de usuarios que mantienen conversaciones con cuentas comerciales. Se utiliza desde computadores de escritorio o portátiles con acceso a internet, especialmente en entornos personales, académicos y laborales. En estos espacios resulta práctico escribir, consultar conversaciones y compartir archivos mientras se realizan otras actividades.
 
 
 % RESUMEN ANALÍTICO
@@ -106,30 +107,29 @@ WhatsApp Web es una plataforma de mensajería instantánea que permite a los usu
 
 La cláusula 5.2.4 de la norma ISO/IEC/IEEE 29148:2018 establece que un requisito bien formado debe expresar una necesidad o capacidad que el sistema debe satisfacer de manera clara, completa y verificable. Su redacción debe permitir identificar qué se espera del sistema y bajo qué condiciones debe cumplirse, sin dejar aspectos esenciales a la interpretación del lector \cite{iso29148}.
 
-En WhatsApp Web, un ejemplo es: «El sistema deberá permitir al usuario enviar mensajes de texto a un contacto seleccionado». El enunciado describe una capacidad concreta y puede comprobarse mediante una prueba. Esto demuestra que un requisito no debe limitarse a expresar una idea general, sino que debe comunicar una condición que pueda evaluarse.
+En WhatsApp Web, un ejemplo es: ``El sistema deberá permitir al usuario enviar mensajes de texto a un contacto seleccionado''. El enunciado describe una capacidad concreta y puede comprobarse mediante una prueba. Esto demuestra que un requisito no debe limitarse a expresar una idea general, sino que debe comunicar una condición que pueda evaluarse.
 
-La cláusula 5.2.8 también diferencia el requisito de sus atributos. El requisito expresa lo que el sistema debe cumplir; sus atributos aportan información para identificarlo, clasificarlo y gestionarlo. Por ejemplo, el identificador, la prioridad, la justificación, la fuente y el estado permiten administrar el requisito de envío de mensajes, pero no constituyen funciones del sistema.
+La cláusula 5.2.8 también diferencia el requisito de sus atributos. El requisito expresa lo que el sistema debe cumplir, mientras que sus atributos aportan información para identificarlo, clasificarlo y gestionarlo. Por ejemplo, el identificador, la prioridad, la justificación, la fuente y el estado permiten administrar el requisito de envío de mensajes, pero no constituyen funciones del sistema.
 
 \subsection{Características de un requisito individual}
 
-De acuerdo con la cláusula 5.2.5, cada requisito debe reunir nueve características. Debe ser \textbf{necesario}, porque responde a una necesidad real; \textbf{apropiado}, porque mantiene el nivel de detalle correspondiente; y \textbf{sin ambigüedad}, porque admite una sola interpretación. Además, debe ser \textbf{completo}, al incluir la información necesaria; \textbf{singular}, al expresar una sola condición; y \textbf{factible}, porque puede cumplirse con los recursos y limitaciones existentes. También debe ser \textbf{verificable}, para comprobar objetivamente su cumplimiento; \textbf{correcto}, porque representa la necesidad de origen; y \textbf{conforme}, porque respeta la estructura y las reglas de documentación establecidas.
+De acuerdo con la cláusula 5.2.5, cada requisito debe reunir nueve características. Debe ser necesario porque responde a una necesidad real, apropiado porque mantiene el nivel de detalle correspondiente y sin ambigüedad porque admite una sola interpretación. Además debe ser completo, al incluir la información necesaria, singular, al expresar una sola condición, y factible, porque puede cumplirse con los recursos y limitaciones existentes. Por otra parte, debe ser verificable para comprobar objetivamente su cumplimiento, correcto porque representa la necesidad de origen y conforme porque respeta la estructura y las reglas de documentación establecidas.
 
-Estas características permiten detectar problemas antes de incorporar un requisito a la especificación. Por ejemplo, «WhatsApp Web deberá ser fácil de utilizar» no es verificable ni está libre de ambigüedad, ya que la palabra «fácil» depende de la opinión de cada usuario y no establece una medida para evaluar el resultado. La importancia de evaluar la calidad de los requisitos también ha sido abordada en investigaciones empíricas sobre este ámbito \cite{montgomery2022requirements}.
-
+Estas características permiten detectar problemas antes de incorporar un requisito a la especificación. Por ejemplo, ``WhatsApp Web deberá ser fácil de utilizar'' no es verificable ni está libre de ambigüedad, ya que la palabra fácil depende de la opinión de cada usuario y no establece una medida para evaluar el resultado. La importancia de evaluar la calidad de los requisitos también ha sido abordada en investigaciones empíricas sobre este ámbito \cite{montgomery2022requirements}.
 
 \subsection{Características de un conjunto de requisitos}
 
-La cláusula 5.2.6 indica que un conjunto debe evaluarse como un todo. Sus requisitos deben ser \textbf{completos}, al cubrir las necesidades identificadas; \textbf{consistentes}, al no contradecirse ni duplicarse; y \textbf{factibles}, al poder realizarse dentro de las restricciones existentes. Asimismo, deben ser \textbf{comprensibles}, para que las partes interesadas entiendan lo solicitado, y el conjunto debe poder \textbf{validarse}, de modo que sea posible confirmar que responde a sus necesidades.
+La cláusula 5.2.6 indica que un conjunto debe evaluarse como un todo. Sus requisitos deben ser completos al cubrir las necesidades identificadas, consistentes, al no contradecirse ni duplicarse y factibles al poder realizarse dentro de las restricciones existentes. También, deben ser comprensibles, para que las partes interesadas entiendan lo solicitado. El conjunto también debe poder validarse, de modo que sea posible confirmar que responde a sus necesidades.
 
-En WhatsApp Web, no basta con definir el envío de mensajes: también deben considerarse la recepción, el historial y el intercambio de archivos. Estos requisitos deben complementarse sin contradicciones para representar de forma coherente las capacidades esperadas del sistema. Por ello, la calidad del conjunto no depende únicamente de que cada enunciado esté bien redactado, sino también de que todos describan una solución suficiente y compatible.
+En WhatsApp Web, no basta con definir el envío de mensajes. Del mismo modo, deben considerarse la recepción, el historial y el intercambio de archivos. Estos requisitos deben complementarse sin contradicciones para representar de forma coherente las capacidades esperadas del sistema. Por ello, la calidad del conjunto no depende únicamente de que cada enunciado esté bien redactado, sino también de que todos describan una solución suficiente y compatible.
 
 \subsection{Criterios de lenguaje y términos ambiguos}
 
 La cláusula 5.2.7 recomienda redactar los requisitos con un lenguaje preciso y evitar expresiones que permitan interpretaciones diferentes. También es importante describir qué debe lograr el sistema, sin imponer decisiones de diseño o implementación que no sean necesarias \cite{iso29148}.
 
-Entre las expresiones que deben evitarse se encuentran los superlativos y comparativos sin parámetros, como «mejor» o «de mayor calidad»; los términos subjetivos, como «fácil» o «rentable»; y los pronombres vagos, como «esto» o «eso», cuando no tienen un referente claro. También deben evitarse adverbios y adjetivos imprecisos, como «rápidamente», «significativo» o «mínimo»; expresiones abiertas, como «pero sin limitarse a»; y condiciones indefinidas, como «si es posible» o «según corresponda». Las palabras que implican totalidad, como «siempre», «nunca» o «todo», requieren especial cuidado porque pueden establecer condiciones difíciles de demostrar. Finalmente, las referencias a otros documentos deben identificar con precisión su versión y las partes aplicables.
+Entre las expresiones que deben evitarse se encuentran los superlativos y comparativos sin parámetros, como mejor o de mayor calidad. Igualmente deben evitarse los términos subjetivos, como fácil o rentable, y los pronombres vagos, como esto o eso, cuando no tienen un referente claro. Además, es necesario evitar adverbios y adjetivos imprecisos, como rápidamente, significativo o mínimo, así como expresiones abiertas, como pero sin limitarse a, y condiciones indefinidas, como si es posible o según corresponda. Las palabras que implican totalidad, como siempre, nunca o todo, requieren especial cuidado porque pueden establecer condiciones difíciles de demostrar. Por otro lado, las referencias a otros documentos deben identificar con precisión su versión y las partes aplicables.
 
-Por ejemplo, «WhatsApp Web deberá cargar los mensajes rápidamente» no establece un límite comprobable. En cambio, indicar un tiempo máximo y las condiciones de prueba permite medir el resultado. En conclusión, aplicar estas pautas ayuda a formular requisitos claros, verificables y coherentes, tanto de manera individual como dentro del conjunto.
+Por ejemplo, ``WhatsApp Web deberá cargar los mensajes rápidamente'' no establece un límite comprobable. En cambio, indicar un tiempo máximo y las condiciones de prueba permite medir el resultado. Aplicar estas pautas ayuda a formular requisitos claros, verificables y coherentes, tanto de manera individual como dentro del conjunto.
 
 % GLOSARIO
 \section{Glosario de términos de la cláusula 3}
@@ -155,7 +155,7 @@ Por ejemplo, «WhatsApp Web deberá cargar los mensajes rápidamente» no establ
 \bottomrule
 \endfoot
 
-Atributo & 
+Atributo &
 Propiedad o característica de un elemento que permite describirlo o distinguirlo mediante información cualitativa o cuantitativa. &
 El requisito de enviar mensajes tiene atributos como identificador, prioridad y estado. \\
 
@@ -207,45 +207,44 @@ Se consulta a los usuarios si los requisitos definidos para enviar mensajes y co
 \begin{enumerate}[leftmargin=1.5cm]
 
     % Requisitos funcionales
-    \item \textbf{RF-01:} El sistema deberá permitir que el usuario envíe mensajes de texto a los contactos con los que tenga una conversación activa.
+    \item RF-01: El sistema deberá permitir que el usuario envíe mensajes de texto a los contactos con los que tenga una conversación activa.
 
-    \item \textbf{RF-02:} El sistema deberá permitir que el usuario adjunte y envíe imágenes, documentos y videos desde su computador.
+    \item RF-02: El sistema deberá permitir que el usuario adjunte y envíe imágenes, documentos y videos desde su computador.
 
-    \item \textbf{RF-03:} El sistema deberá mostrar el historial de mensajes de cada conversación, incluyendo el contenido y la fecha de envío.
+    \item RF-03: El sistema deberá mostrar el historial de mensajes de cada conversación, incluyendo el contenido y la fecha de envío.
 
-    \item \textbf{RF-04:} El sistema deberá permitir que el usuario busque contactos y conversaciones mediante el nombre del contacto o el contenido de los mensajes.
+    \item RF-04: El sistema deberá permitir que el usuario busque contactos y conversaciones mediante el nombre del contacto o el contenido de los mensajes.
 
     % Requisitos de desempeño
-    \item \textbf{RD-01:} El sistema deberá mostrar los mensajes recibidos en un tiempo máximo de 2 segundos, siempre que exista una conexión a internet estable.
+    \item RD-01: El sistema deberá mostrar los mensajes recibidos en un tiempo máximo de 2 segundos, siempre que exista una conexión a internet estable.
 
-    \item \textbf{RD-02:} El sistema deberá cargar una conversación con hasta 1000 mensajes en un tiempo máximo de 3 segundos, bajo condiciones normales de conexión y funcionamiento.
+    \item RD-02: El sistema deberá cargar una conversación con hasta 1000 mensajes en un tiempo máximo de 3 segundos, bajo condiciones normales de conexión y funcionamiento.
 
     % Requisito de interfaz externa
-    \item \textbf{RI-01:} El sistema deberá permitir la vinculación de la cuenta de WhatsApp mediante el escaneo de un código QR utilizando la aplicación móvil.
+    \item RI-01: El sistema deberá permitir la vinculación de la cuenta de WhatsApp mediante el escaneo de un código QR utilizando la aplicación móvil.
 
     % Requisito de proceso
-    \item \textbf{RP-01:} El proceso de envío de un mensaje deberá registrar su estado como pendiente, enviado, entregado o leído, según la información disponible del sistema.
+    \item RP-01: El proceso de envío de un mensaje deberá registrar su estado como pendiente, enviado, entregado o leído, según la información disponible del sistema.
 
     % Requisitos de calidad
-    \item \textbf{RQ-01:} El sistema deberá mantener una disponibilidad mínima del 99\% durante cada mes de funcionamiento.
+    \item RQ-01: El sistema deberá mantener una disponibilidad mínima del 99\% durante cada mes de funcionamiento.
 
-    \item \textbf{RQ-02:} El sistema deberá garantizar que el contenido de los mensajes solo sea accesible para los participantes autorizados de la conversación.
+    \item RQ-02: El sistema deberá garantizar que el contenido de los mensajes solo sea accesible para los participantes autorizados de la conversación.
 
-    \item \textbf{RQ-03:} El sistema deberá mantener la compatibilidad con las dos versiones más recientes de los navegadores Google Chrome, Mozilla Firefox y Microsoft Edge.
+    \item RQ-03: El sistema deberá mantener la compatibilidad con las dos versiones más recientes de los navegadores Google Chrome, Mozilla Firefox y Microsoft Edge.
 
-    \item \textbf{RQ-04:} El sistema deberá conservar la integridad de los archivos enviados, de manera que el archivo recibido coincida con el archivo original.
+    \item RQ-04: El sistema deberá conservar la integridad de los archivos enviados, de manera que el archivo recibido coincida con el archivo original.
 
-    \item \textbf{RQ-05:} El sistema deberá recuperar el acceso a las conversaciones en un tiempo máximo de 30 segundos después de restablecerse una interrupción de la conexión a internet.
+    \item RQ-05: El sistema deberá recuperar el acceso a las conversaciones en un tiempo máximo de 30 segundos después de restablecerse una interrupción de la conexión a internet.
 
     % Requisitos de usabilidad o calidad en uso
-    \item \textbf{RU-01:} Al menos el 90\% de los usuarios participantes deberá completar el envío de un mensaje de texto sin asistencia durante una prueba de usabilidad.
+    \item RU-01: Al menos el 90\% de los usuarios participantes deberá completar el envío de un mensaje de texto sin asistencia durante una prueba de usabilidad.
 
-    \item \textbf{RU-02:} Al menos el 90\% de los usuarios participantes deberá localizar una conversación específica en un tiempo máximo de 30 segundos durante una prueba de usabilidad.
+    \item RU-02: Al menos el 90\% de los usuarios participantes deberá localizar una conversación específica en un tiempo máximo de 30 segundos durante una prueba de usabilidad.
 
 \end{enumerate}
 
 
-%
 % CLASIFICACIÓN
 \section{Clasificación de los requisitos}
 
@@ -484,9 +483,9 @@ Al menos el 90\% de los usuarios participantes deberá localizar una conversaci�
 % REFLEXIÓN
 \section{Reflexión}
 
-Para esta reflexión, considero que los requisitos de calidad fueron los que presentaron mayor dificultad, principalmente porque no basta con describir cómo debería comportarse el sistema, sino que también es necesario identificar una característica y subcaracterística de la norma ISO/IEC 25010:2023 que se relacione correctamente con cada requisito. Además, fue necesario establecer métricas y criterios de aceptación que permitieran comprobar su cumplimiento, utilizando valores específicos en lugar de expresiones subjetivas como «rápidamente» o «correctamente».
+Para esta reflexión, considero que los requisitos de calidad fueron los que presentaron mayor dificultad, principalmente porque no basta con describir cómo debería comportarse el sistema. También es necesario identificar una característica y subcaracterística de la norma ISO/IEC 25010:2023 que se relacione correctamente con cada requisito. Además, fue necesario establecer métricas y criterios de aceptación que permitieran comprobar su cumplimiento, utilizando valores específicos en lugar de expresiones subjetivas como ``rápidamente'' o ``correctamente''.
 
-En el caso de WhatsApp Web, algunos aspectos, como la disponibilidad, la seguridad y la recuperación ante interrupciones de conexión, requirieron analizar qué condiciones podían medirse y cómo establecer un límite para evaluarlas. También fue importante diferenciar los requisitos de calidad del producto de los requisitos de calidad en uso, ya que estos últimos se relacionan con los resultados que obtienen los usuarios al utilizar el sistema.
+En el caso de WhatsApp Web, algunos aspectos, como la disponibilidad, la seguridad y la recuperación ante interrupciones de conexión, requirieron analizar qué condiciones podían medirse y cómo establecer un límite para evaluarlas. De igual manera, fue importante diferenciar los requisitos de calidad del producto de los requisitos de calidad en uso, ya que estos últimos se relacionan con los resultados que obtienen los usuarios al utilizar el sistema.
 
 Esta actividad me permitió comprender que redactar requisitos no consiste únicamente en describir las funciones de un sistema, sino en expresar sus necesidades de manera clara, precisa y verificable. También entendí la importancia de revisar cada enunciado para evitar ambigüedades y asegurar que pueda ser evaluado durante el desarrollo y las pruebas del software.
 
@@ -517,10 +516,11 @@ Esta actividad me permitió comprender que redactar requisitos no consiste únic
 % DECLARACIÓN
 \section{Declaración de uso de herramientas de apoyo}
 
-Para realizar esta actividad, se utilizaron Claude Sonnet 5.5, de Anthropic, y ChatGPT GPT-6, de OpenAI, como herramientas de apoyo para revisar la redacción, identificar ambigüedades y solucionar errores relacionados con el código LaTeX. También se emplearon para verificar que los requisitos estuvieran clasificados correctamente. Cuando se identificaron errores, se solicitó su corrección y la respectiva justificación. Las recomendaciones proporcionadas fueron analizadas y consideradas para realizar los ajustes necesarios en el documento.
+Para realizar esta actividad, se utilizaron Claude Sonnet 5.5, de Anthropic, y ChatGPT GPT-6, de OpenAI, como herramientas de apoyo para revisar la redacción, identificar ambigüedades y solucionar errores relacionados con el código LaTeX. También se emplearon para verificar la clasificación de los requisitos. Cuando se identificaron posibles errores, se solicitó su revisión y la explicación correspondiente. Las recomendaciones proporcionadas fueron analizadas y consideradas para realizar los ajustes necesarios en el documento.
 
 % REFERENCIAS
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
 
 \end{document}
+```
